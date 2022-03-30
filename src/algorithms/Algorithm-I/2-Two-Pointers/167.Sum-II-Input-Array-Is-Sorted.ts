@@ -1,26 +1,15 @@
-function twoSum(numbers: number[], target: number): number[] {
-    const { length } = numbers;
-    const arrSum = [];
-    let sum = 0;
+// function twoSum(numbers: number[], target: number): [number, number] {
+//     const { length } = numbers;
+//     let start = 0;
+//     let end = length - 1;
 
-    for (let index = length - 1; index >= 0; index--) {
-        if (numbers[index] === 0) {
-            arrSum.unshift(index + 1);
-            continue;
-        }
+//     while (numbers[start] + numbers[end] !== target) {
+//         if (numbers[end] > target || numbers[end] + numbers[start] >= target) {
+//             end--;
+//         } else {
+//             start++;
+//         }
+//     }
 
-        if (numbers[index] + sum <= target) {
-            arrSum.unshift(index + 1);
-            sum += numbers[index];
-        }
-    }
-
-    if (sum !== target) {
-        const newSum = twoSum(numbers, sum);
-        arrSum.push(...newSum);
-    }
-    return arrSum;
-}
-
-console.log(twoSum([-3, 3, 4, 90], 0)); // [1,2]
-console.log(twoSum([2, 3, 4], 6)); // [1,3]
+//     return [++start, ++end];
+// }

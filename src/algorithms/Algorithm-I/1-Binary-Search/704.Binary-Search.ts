@@ -1,4 +1,4 @@
-// function search(nums: number[], target: number): number {
+// export default function search(nums: number[], target: number): number {
 //     const { length } = nums;
 //     let start: number = 0;
 //     let end: number = length - 1;
@@ -22,4 +22,3 @@
 
 //     return -1;
 // }
-// search([], 0);
